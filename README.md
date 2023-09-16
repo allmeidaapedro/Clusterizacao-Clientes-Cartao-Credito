@@ -1,1 +1,1 @@
-# Clusterização de clientes de cartão de crédito
+# Clusterização de clientes de instituição financeira

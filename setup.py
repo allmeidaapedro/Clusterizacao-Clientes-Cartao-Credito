@@ -32,7 +32,7 @@ def get_requirements(file_path:str)->List[str]:
 
 # Defining the setup.
 setup(
-    name = 'Clusterizacao de Clientes de Cartao de Credito',
+    name = 'Clusterizacao de Clientes',
     version = '0.0.1',
     author = 'Pedro Almeida',
     author_email = 'pedrooalmeida.net@gmail.com',
