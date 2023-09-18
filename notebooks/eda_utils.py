@@ -70,27 +70,27 @@ def sns_plots(data, features, histplot=True,countplot=False,
             
             if countplot:
                 # Plotting countplot and adding the counts at the top of each bar.
-                sns.countplot(data=data, y=feature, hue=hue, ax=ax)
+                sns.countplot(data=data, y=feature, hue=hue, ax=ax, palette='Set2')
                 for container in ax.containers:
                     ax.bar_label(container)
 
             elif barplot:
                 # Plotting barplot and adding the averages at the top of each bar.
-                ax = sns.barplot(data=data, x=feature, y=barplot_y, hue=hue, ax=ax, ci=None)
+                ax = sns.barplot(data=data, x=feature, y=barplot_y, hue=hue, ax=ax, ci=None, palette='Set2')
                 for container in ax.containers:
                     ax.bar_label(container)
 
             elif boxplot:
                 # Plotting multivariate boxplot.
-                sns.boxplot(data=data, x=boxplot_x, y=feature, showfliers=outliers, ax=ax)
+                sns.boxplot(data=data, x=boxplot_x, y=feature, showfliers=outliers, ax=ax, palette='Set2')
 
             elif outliers:
                 # Plotting univariate boxplot.
-                sns.boxplot(data=data, x=feature, ax=ax)
+                sns.boxplot(data=data, x=feature, ax=ax, palette='Set2')
 
             else:
                 # Plotting histplot.
-                sns.histplot(data=data, x=feature, hue=hue, kde=kde, ax=ax)
+                sns.histplot(data=data, x=feature, hue=hue, kde=kde, ax=ax, palette='Set2')
 
             ax.set_title(feature)  
             ax.set_xlabel('')  
